@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'OCRAEXT';
+    src: url('./assets/font/OCRAEXT.otf');
+}
+
+@font-face {
+    font-family: '方正兰亭中黑_GBK';
+    src: url('./assets/font/方正兰亭中黑_GBK.TTF');
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./assets/font/Montserrat.woff');
+}
+
+@font-face {
+    font-family: "REEJI-FlashSansGB-Flash-Light";
+    src: url('./assets/font/REEJI-FlashSansGB-Flash-Light.ttf');
+}
+
+@font-face {
+    font-family: "REEJI-FlashSansGB-Flash-Regular";
+    src: url('./assets/font/REEJI-FlashSansGB-Flash-Regular.ttf');
+}
+
+@font-face {
+    font-family: "REEJI-FlashSansGB-Flash-Black";
+    src: url('./assets/font/REEJI-FlashSansGB-Flash-Black.ttf');
+}
+
+@font-face {
+    font-family: "PingFang SC";
+    src: url('./assets/font/PingFang-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'REEJI-FlashSansGB-Flash-Regular';
+}
+
+@media screen and (max-width:620px) {
+    * {
+        font-family: 'PingFang SC' !important;
+    }
+}
+
+p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.25);
+    transition: color 0.2s ease;
+}
+
+.noSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

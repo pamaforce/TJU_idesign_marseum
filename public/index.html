@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
+<html lang="cn">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
+    <script>
+        (function(w, d, s, q, i) {
+            w[q] = w[q] || [];
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s);
+            j.async = true;
+            j.id = 'beacon-aplus';
+            j.src = 'https://d.alicdn.com/alilog/mlog/aplus/' + i + '.js';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'aplus_queue', '203467608');
+        aplus_queue.push({
+            action: 'aplus.setMetaInfo',
+            arguments: ['appKey', '62968bb588ccdf4b7e819952']
+        });
+        aplus_queue.push({
+            action: 'aplus.setMetaInfo',
+            arguments: ['aplus-waiting', 'MAN']
+        });
+        aplus_queue.push({
+            action: 'aplus.setMetaInfo',
+            arguments: ['DEBUG', false]
+        });
+    </script>
+    <title>
+        2022·天津大学第八届设计年展·火星博物馆
+    </title>
+</head>
+
+<body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+</body>
+
 </html>
