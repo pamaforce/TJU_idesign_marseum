@@ -5,8 +5,8 @@
       :style="
         'background-image:url(' +
         (notMobile
-          ? require('../assets/background_' + (backGround ? 2 : 1) + '.png')
-          : require('../assets/mobile/background_1.png')) +
+          ? require('../assets/background_' + (backGround ? 2 : 1) + '.webp')
+          : require('../assets/mobile/background_1.webp')) +
         ')'
       "
       @mousedown="videoStatue = false"
@@ -23,8 +23,8 @@
     <img
       :src="
         require($i18n.locale === 'cn'
-          ? '../assets/mobile/enter.png'
-          : '../assets/mobile/enter_en.png')
+          ? '../assets/mobile/enter.webp'
+          : '../assets/mobile/enter_en.webp')
       "
       v-if="!notMobile"
       class="enter-class"
@@ -41,13 +41,13 @@
     ></canvas>
     <div class="preface" v-if="notMobile">
       <img
-        src="../assets/pre-left.png"
+        src="../assets/pre-left.webp"
         class="pre-left noSelect"
         alt="background"
         @dragstart.prevent
       />
       <img
-        src="../assets/pre-right.png"
+        src="../assets/pre-right.webp"
         class="pre-right noSelect"
         alt="background"
         @dragstart.prevent
@@ -84,12 +84,12 @@
         $i18n.locale === 'cn'
           ? ''
           : 'background-image:url(' +
-            require('../assets/mobile/preface_en.png') +
+            require('../assets/mobile/preface_en.webp') +
             ')'
       "
     ></div>
     <img
-      src="../assets/mobile/background.png"
+      src="../assets/mobile/background.webp"
       class="back-img"
       v-if="!notMobile"
       alt="back-img"
@@ -98,7 +98,7 @@
       <p class="mars-paragraph">
         {{ $t("intro") }}
       </p>
-      <img src="../assets/enter.png" class="mars-enter" />
+      <img src="../assets/enter.webp" class="mars-enter" />
       <div class="mars-content noSelect">
         <div
           :class="'mars-item item-1' + (hoverOthers ? '' : ' item-01')"
@@ -182,7 +182,7 @@
         <div class="epilogue-title">{{ $t("epilogue") }}</div>
       </div>
       <img
-        src="../assets/epilogue_img.png"
+        src="../assets/epilogue_img.webp"
         class="epilogue-img noSelect"
         alt="epilogue-img"
         @dragstart.prevent
@@ -205,7 +205,7 @@
         $i18n.locale === 'cn'
           ? ''
           : 'background-image:url(' +
-            require('../assets/mobile/epilogue_en.png') +
+            require('../assets/mobile/epilogue_en.webp') +
             ')'
       "
     >
@@ -231,7 +231,7 @@
       @click="hideIt"
     >
       <img
-        src="../assets/mobile/welcome.png"
+        src="../assets/mobile/welcome.webp"
         alt="welcome"
         class="noSelect"
         @dragstart.prevent
@@ -256,6 +256,7 @@ let Engine = Matter.Engine,
   Vertices = Matter.Vertices;
 Common.setDecomp(require("pathseg"));
 Common.setDecomp(require("poly-decomp"));
+import { VIDEO_BASE_URL } from "../utils/constants.js";
 export default {
   name: "Home",
   props: ["notMobile"],
@@ -298,7 +299,7 @@ export default {
         sources: [
           {
             type: "video/mp4", // 类型
-            src: "http://idesign.tju.edu.cn/marseum/mp4/simple.mp4", // url地址
+            src: VIDEO_BASE_URL + "simple.mp4", // url地址
           },
         ],
         poster: "", // 封面地址
@@ -342,7 +343,7 @@ export default {
       window.open("https://b23.tv/5kbSDZr", "_blank");
     },
     toOnline() {
-      window.open("http://njzv43.epub360.cn/v2/manage/book/easamt/", "_blank");
+      window.open("https://njzv43.epub360.cn/v2/manage/book/easamt/", "_blank");
     },
     loopAni() {
       for (let i = 0; i < this.myVertices.length; i++) {
@@ -455,8 +456,8 @@ export default {
             source: this.notMobile
               ? require("../assets/background_" +
                   (this.backGround ? 1 : 2) +
-                  ".png")
-              : require("../assets/mobile/background_1.png"),
+                  ".webp")
+              : require("../assets/mobile/background_1.webp"),
             smoothing: "high",
           });
           rasterImg.scale(10);
@@ -528,7 +529,7 @@ export default {
   position: relative;
   width: 1920px;
   padding-top: 950px;
-  background-image: url("../assets/background.png");
+  background-image: url("../assets/background.webp");
   background-size: 1920px 2858px;
   background-position-x: -85px;
   background-position-y: 80px;
@@ -677,22 +678,22 @@ export default {
   color: #fff;
 }
 .item-1 {
-  background-image: url("../assets/item_1.png");
+  background-image: url("../assets/item_1.webp");
 }
 .item-2 {
-  background-image: url("../assets/item_2.png");
+  background-image: url("../assets/item_2.webp");
 }
 .item-3 {
-  background-image: url("../assets/item_3.png");
+  background-image: url("../assets/item_3.webp");
 }
 .item-4 {
-  background-image: url("../assets/item_4.png");
+  background-image: url("../assets/item_4.webp");
 }
 .item-5 {
-  background-image: url("../assets/item_5.png");
+  background-image: url("../assets/item_5.webp");
 }
 .item-6 {
-  background-image: url("../assets/item_6.png");
+  background-image: url("../assets/item_6.webp");
 }
 .item-01 {
   width: 435px !important;
@@ -796,7 +797,7 @@ export default {
     height: 317px;
     background: #d36a64;
     border-radius: 12px 12px 0px 0px;
-    background-image: url("../assets/mobile/preface.png");
+    background-image: url("../assets/mobile/preface.webp");
     background-size: 414px 317px;
     background-repeat: no-repeat;
   }
@@ -878,7 +879,7 @@ export default {
     width: 414px;
     height: 381px;
     margin-bottom: 36px;
-    background-image: url("../assets/mobile/epilogue.png");
+    background-image: url("../assets/mobile/epilogue.webp");
     background-size: 414px 381px;
     background-repeat: no-repeat;
   }
@@ -897,22 +898,22 @@ export default {
     height: 40px;
   }
   .mobile-item-1 {
-    background-image: url("../assets/mobile/item_1.png");
+    background-image: url("../assets/mobile/item_1.webp");
   }
   .mobile-item-2 {
-    background-image: url("../assets/mobile/item_2.png");
+    background-image: url("../assets/mobile/item_2.webp");
   }
   .mobile-item-3 {
-    background-image: url("../assets/mobile/item_3.png");
+    background-image: url("../assets/mobile/item_3.webp");
   }
   .mobile-item-4 {
-    background-image: url("../assets/mobile/item_4.png");
+    background-image: url("../assets/mobile/item_4.webp");
   }
   .mobile-item-5 {
-    background-image: url("../assets/mobile/item_5.png");
+    background-image: url("../assets/mobile/item_5.webp");
   }
   .mobile-item-6 {
-    background-image: url("../assets/mobile/item_6.png");
+    background-image: url("../assets/mobile/item_6.webp");
   }
   .mobile-welcome {
     position: fixed;

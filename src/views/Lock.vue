@@ -4,13 +4,13 @@
       <div class="lock"></div>
       <div class="slot">
         <img
-          src="../assets/lock_2.png"
+          src="../assets/lock_2.webp"
           alt="text"
           class="noSelect"
           @dragstart.prevent
         />
         <img
-          src="../assets/lock_3.png"
+          src="../assets/lock_3.webp"
           alt="text"
           class="noSelect"
           @dragstart.prevent
@@ -20,7 +20,7 @@
     <template v-else>
       <div class="mobile-lock">
         <img
-          src="../assets/mobile/lock.png"
+          src="../assets/mobile/lock.webp"
           alt="text"
           class="noSelect"
           @dragstart.prevent
@@ -53,7 +53,7 @@ export default {
   right: 0;
   bottom: 0;
   z-index: 99998;
-  background-image: url("../assets/background_2.png");
+  background-image: url("../assets/background_2.webp");
   background-size: 100% 100%;
   opacity: 0.3;
   background-color: white;

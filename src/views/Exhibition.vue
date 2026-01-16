@@ -20,14 +20,14 @@
       ></div>
       <div class="desc">
         <img
-          :src="require('../assets/' + $route.params.category_id + '_0.png')"
+          :src="require('../assets/' + $route.params.category_id + '_0.webp')"
           alt="icon"
           :key="$route.params.category_id + '_0'"
           class="icon_0 noSelect"
           @dragstart.prevent
         />
         <img
-          :src="require('../assets/' + $route.params.category_id + '_1.png')"
+          :src="require('../assets/' + $route.params.category_id + '_1.webp')"
           alt="icon"
           :key="$route.params.category_id + '_1'"
           class="icon_00 noSelect"
@@ -73,7 +73,7 @@
       </div>
       <div class="content">
         <img
-          :src="require('../assets/' + $route.params.category_id + '_4.png')"
+          :src="require('../assets/' + $route.params.category_id + '_4.webp')"
           alt="icon"
           class="icon_4 noSelect"
           @dragstart.prevent
@@ -131,7 +131,7 @@
       </div>
       <div class="paging noSelect">
         <img
-          :src="require('../assets/' + $route.params.category_id + '_5.png')"
+          :src="require('../assets/' + $route.params.category_id + '_5.webp')"
           class="pre"
           alt="pre"
           @dragstart.prevent
@@ -161,7 +161,7 @@
           {{ $t("next") }}
         </span>
         <img
-          :src="require('../assets/' + $route.params.category_id + '_5.png')"
+          :src="require('../assets/' + $route.params.category_id + '_5.webp')"
           class="next"
           alt="next"
           :style="canNext ? '' : 'cursor:not-allowed;opacity:0.5'"
@@ -176,10 +176,10 @@
           $i18n.locale === 'cn'
             ? require('../assets/mobile/' +
                 ($route.params.category_id || 50) +
-                '.png')
+                '.webp')
             : require('../assets/mobile/' +
                 ($route.params.category_id || 50) +
-                '_en.png')
+                '_en.webp')
         "
         alt="back-img"
         class="mobile-back"
@@ -292,6 +292,7 @@
 </template>
 <script>
 import service from "../utils/request";
+import { UPLOAD_URL } from "../utils/constants.js";
 export default {
   props: ["notMobile"],
   data() {
@@ -490,7 +491,7 @@ export default {
             ...data.data.data[i],
             title: data.data.data[i].post_title,
             src:
-              "http://idesign.tju.edu.cn/upload/" +
+              UPLOAD_URL +
               data.data.data[i].more.thumbnail,
             authors: y,
             authors_en: x,

@@ -2,19 +2,19 @@
   <div class="graduate" :style="notMobile ? '' : 'background-color:#e5e5e5'">
     <template v-if="notMobile">
       <img
-        src="../assets/graduate/background_4.png"
+        src="../assets/graduate/background_4.webp"
         class="back_1 noSelect"
         @dragstart.prevent
         alt="background"
       /><img
-        src="../assets/graduate/background_6.png"
+        src="../assets/graduate/background_6.webp"
         class="back_3 noSelect"
         @dragstart.prevent
         alt="background"
       />
       <div class="title">
         <img
-          src="../assets/graduate/background_5.png"
+          src="../assets/graduate/background_5.webp"
           class="back_2 noSelect"
           @dragstart.prevent
           alt="background"
@@ -47,7 +47,7 @@
       </div>
       <div class="title">
         <img
-          src="../assets/graduate/background_5.png"
+          src="../assets/graduate/background_5.webp"
           class="back_2 noSelect"
           @dragstart.prevent
           alt="background"
@@ -61,7 +61,7 @@
         >
           <div class="name-title">
             <img
-              :src="require('../assets/graduate/title_' + i + '.png')"
+              :src="require('../assets/graduate/title_' + i + '.webp')"
               :class="'back_4 back_4_' + i + ' noSelect'"
               @dragstart.prevent
               alt="background"
@@ -80,12 +80,12 @@
                   i +
                   '/' +
                   (j + 1) +
-                  '.png')
+                  '.webp')
               "
               @dragstart.prevent
               alt="avatar"
             /><img
-              src="../assets/graduate/background_7.png"
+              src="../assets/graduate/background_7.webp"
               class="back_7 noSelect"
               @dragstart.prevent
               alt="background"
@@ -123,7 +123,7 @@
                   i +
                   '/' +
                   (j + 1) +
-                  '.png')
+                  '.webp')
               "
               @dragstart.prevent
               alt="avatar"
@@ -710,7 +710,7 @@ export default {
   transform: translate(-50%, -50%);
   width: 374px;
   height: 537px;
-  background-image: url("../assets/mobile/sponsor.png");
+  background-image: url("../assets/mobile/sponsor.webp");
   background-size: 374px 537px;
 }
 .msg-btn {

@@ -2,20 +2,20 @@
   <div class="graduate" :style="notMobile ? '' : 'background-color:#e5e5e5'">
     <template v-if="notMobile">
       <img
-        src="../assets/graduate/background_1.png"
+        src="../assets/graduate/background_1.webp"
         class="back_1 noSelect"
         @dragstart.prevent
         alt="background"
       />
       <img
-        src="../assets/graduate/background_2.png"
+        src="../assets/graduate/background_2.webp"
         class="back_2 noSelect"
         @dragstart.prevent
         alt="background"
       />
       <div class="teacher">
         <img
-          src="../assets/graduate/background_3.png"
+          src="../assets/graduate/background_3.webp"
           class="back_3_1 noSelect"
           @dragstart.prevent
           alt="background"
@@ -24,14 +24,14 @@
         <div class="teacher-images">
           <img
             class="noSelect"
-            src="../assets/graduate/teacher_1.png"
+            src="../assets/graduate/teacher_1.webp"
             @dragstart.prevent
             alt="teacher"
             preview="0"
           />
           <img
             class="noSelect"
-            src="../assets/graduate/teacher_2.png"
+            src="../assets/graduate/teacher_2.webp"
             @dragstart.prevent
             alt="teacher"
             preview="1"
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="student">
-        <img src="../assets/graduate/background_3.png" class="back_3_2" />
+        <img src="../assets/graduate/background_3.webp" class="back_3_2" />
         <p class="student-title">毕业生信息</p>
         <div class="student-images">
           <template v-for="(letter, i) in letters">
@@ -52,7 +52,7 @@
                   letter +
                   '/' +
                   (j + 1) +
-                  '.jpg')
+                  '.webp')
               "
               :preview="i + ' ' + j"
               @dragstart.prevent
@@ -81,7 +81,7 @@
                 letter +
                 '/' +
                 (j + 1) +
-                '.jpg')
+                '.webp')
             "
             :preview="i + ' ' + j"
             @dragstart.prevent
@@ -396,7 +396,7 @@ export default {
   transform: translate(-50%, -50%);
   width: 374px;
   height: 537px;
-  background-image: url("../assets/mobile/graduate.png");
+  background-image: url("../assets/mobile/graduate.webp");
   background-size: 374px 537px;
 }
 .msg-btn {

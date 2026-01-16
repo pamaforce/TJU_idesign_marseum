@@ -3,7 +3,7 @@
     <div class="header noSelect">
       <template v-if="notMobile">
         <img
-          src="../assets/logo.png"
+          src="../assets/logo.webp"
           class="logo"
           alt="logo"
           @dragstart.prevent
@@ -47,8 +47,8 @@
               class="icon-search"
               :src="
                 hover
-                  ? require('../assets/search-hover.png')
-                  : require('../assets/search.png')
+                  ? require('../assets/search-hover.webp')
+                  : require('../assets/search.webp')
               "
               @dragstart.prevent
               @mouseover="hover = true"
@@ -118,7 +118,7 @@
               @keydown.enter="toSearch"
             />
             <img
-              src="../assets/search-hover.png"
+              src="../assets/search-hover.webp"
               @dragstart.prevent
               @click="toSearch"
               alt="icon"
@@ -129,7 +129,7 @@
       <template v-else>
         <div>
           <img
-            src="../assets/mobile/logo.png"
+            src="../assets/mobile/logo.webp"
             class="logo"
             alt="logo"
             v-if="!searchStatue"
@@ -151,7 +151,7 @@
           </transition>
           <img
             class="icon-search"
-            src="../assets/mobile/lang.png"
+            src="../assets/mobile/lang.webp"
             @dragstart.prevent
             alt="icon"
             @click="changeLang"
@@ -164,7 +164,7 @@
           />
           <img
             class="icon-search"
-            src="../assets/search.png"
+            src="../assets/search.webp"
             @dragstart.prevent
             alt="icon"
             @click="changeSearch"

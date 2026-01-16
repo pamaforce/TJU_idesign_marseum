@@ -8,13 +8,13 @@
   >
     <p v-if="!cardList.length" class="no-data">{{ $t("no_data") }}</p>
     <img
-      src="../assets/graduate/background_1.png"
+      src="../assets/graduate/background_1.webp"
       class="back_1 noSelect"
       @dragstart.prevent
       alt="background"
     />
     <img
-      src="../assets/graduate/background_2.png"
+      src="../assets/graduate/background_2.webp"
       class="back_2 noSelect"
       @dragstart.prevent
       alt="background"
@@ -177,6 +177,7 @@
 </template>
 <script>
 import service from "../utils/request";
+import { UPLOAD_URL, BASE_URL } from "../utils/constants.js";
 export default {
   props: ["notMobile", "keywords"],
   data() {
@@ -217,7 +218,7 @@ export default {
       this.canNext =
         this.$route.params.category_id !== this.idList[this.idList.length - 1];
       service(
-        "http://idesign.tju.edu.cn/portal/api_v1/get_search_2022?per_page=9999&current_page=1&cate_ids=50,53,48,52,49,51&keyword=" +
+        BASE_URL + "/portal/api_v1/get_search_2022?per_page=9999&current_page=1&cate_ids=50,53,48,52,49,51&keyword=" +
           this.keywords
       ).then((data) => {
         this.cardList = [];
@@ -234,7 +235,7 @@ export default {
             ...data.data.data[i],
             title: data.data.data[i].post_title,
             src:
-              "http://idesign.tju.edu.cn/upload/" +
+              UPLOAD_URL +
               data.data.data[i].more.thumbnail,
             authors: y,
             authors_en: x,

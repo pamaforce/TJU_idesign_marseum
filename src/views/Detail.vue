@@ -167,6 +167,7 @@
 </template>
 <script>
 import service from "../utils/request.js";
+import { UPLOAD_URL } from "../utils/constants.js";
 
 export default {
   name: "detail",
@@ -179,7 +180,7 @@ export default {
     show: false,
     canPre: false,
     canNext: false,
-    staticBaseUrl: "http://idesign.tju.edu.cn/upload/",
+    staticBaseUrl: UPLOAD_URL,
     data: {
       post_title: "",
       post_title_en: "",
@@ -356,7 +357,7 @@ p {
 .fork-icon-class-1 {
   width: 32px;
   height: 32px;
-  background-image: url("../assets/left.png");
+  background-image: url("../assets/left.webp");
   background-size: 24px 24px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -364,7 +365,7 @@ p {
 .fork-icon-class-2 {
   width: 32px;
   height: 32px;
-  background-image: url("../assets/right.png");
+  background-image: url("../assets/right.webp");
   background-size: 24px 24px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -520,7 +521,7 @@ p {
   width: 25px;
   height: 25px;
   border-radius: 50% 50%;
-  background-image: url("../assets/back.png");
+  background-image: url("../assets/back.webp");
   background-size: 18px 18px;
   background-position: 3px center;
   background-repeat: no-repeat;

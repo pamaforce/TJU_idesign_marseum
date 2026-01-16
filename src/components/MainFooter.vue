@@ -15,8 +15,8 @@
       alt="icon"
       :src="
         $route.params.category_id && !$route.params.id
-          ? require('../assets/' + $route.params.category_id + '_6.png')
-          : require('../assets/undefined_6.png')
+          ? require('../assets/' + $route.params.category_id + '_6.webp')
+          : require('../assets/undefined_6.webp')
       "
       :class="
         'noSelect ' +
@@ -98,7 +98,7 @@
       <div class="specialGird-4">邮编 / 300354</div>
     </div>
     <img
-      src="../assets/qrcode.jpg"
+      src="../assets/qrcode.webp"
       class="QR-code noSelect"
       alt="QRCode"
       v-show="qrHover"

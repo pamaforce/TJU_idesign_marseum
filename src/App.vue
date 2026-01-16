@@ -82,7 +82,7 @@ export default {
   },
   created() {
     console.log(
-      "%cIf you find bugs in the website, you can email to %c3020205094@tju.edu.cn %cand let's make it better together! :)",
+      "%cIf you find bugs in the website, you can submit an issue at %chttps://github.com/pamaforce/TJU_idesign_marseum/issues %cand let's make it better together! :)",
       "color: #43bb88;font-size:19px;font-weight: bold;",
       "color: #4267fc;font-size:19px;font-weight: bold;font-style: italic;",
       "color: #43bb88;font-size:19px;font-weight: bold;"
